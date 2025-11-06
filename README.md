@@ -2,7 +2,7 @@
 
 A virtual cybersecurity lab environment built on **Kali Linux 2025.3 (VMware Workstation)** — designed for hands-on exploration of **offensive, defensive, and analytical security tools**.
 
-> 💡 *Created as part of my personal cybersecurity portfolio. This project demonstrates practical skills in penetration testing, network defense, and security research.*
+> 💡 *Part of my personal cybersecurity learning environment. This project provides a ready-to-use Kali Linux lab preconfigured for both offensive and defensive tool exploration.*
 
 ---
 
