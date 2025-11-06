@@ -1,66 +1,64 @@
-# Cyber Lab VM — Starter (Kali on VMware)
+# 🧠 Cybersecurity Lab VM
 
-**VM name:** Cybersecurity Lab  
-**Guest OS:** Kali Linux 2025.3 — https://www.kali.org/get-kali/#kali-platforms  
-**Hypervisor:** VMware Workstation (Windows)
+A virtual cybersecurity lab environment built on **Kali Linux 2025.3 (VMware Workstation)** — designed for hands-on exploration of **offensive, defensive, and analytical security tools**.
 
-This repository contains reproducible instructions and a provisioning script to set up a Kali-based cyber lab that supports both **offensive** and **defensive** exercises.
-> **Important:** This repo does NOT include the VM image. It contains the steps and scripts to recreate the environment locally.
+> 💡 *Created as part of my personal cybersecurity portfolio. This project demonstrates practical skills in penetration testing, network defense, and security research.*
 
 ---
 
-## Quick Start (prerequisites)
-1. Install **VirtualBox** or use VMware Workstation (you already use VMware) and install **Vagrant** if you want to use a Vagrant workflow. The scripts are written for Debian-based systems (Kali).
-2. Download the Kali ISO from: https://www.kali.org/get-kali/#kali-platforms and install it as a VM named **Cybersecurity Lab**.
-3. Apply the VM settings you prefer (example: 4 CPUs, 4 GB RAM, 30 GB disk, NAT networking).
-4. Copy this repo into the VM or clone it from your GitHub after uploading.
+## ⚙️ Overview
 
-### Quick commands (once inside the VM)
+This virtual machine serves as a controlled lab setup for cybersecurity learning and experimentation.  
+It provides an isolated environment to safely test exploits, analyze network traffic, and evaluate threat detection tools.
+
+**Platform:** VMware Workstation (Windows)  
+**Operating System:** Kali Linux 2025.3  
+**VM Name:** Cybersecurity Lab  
+**Specs:** 4 GB RAM, 4 Processors, 30 GB Disk  
+**Network Adapter:** NAT  
+
+---
+
+## 🧰 Installed Tools
+
+The lab includes a curated selection of tools installed via [`install_kali_tools.sh`](scripts/install_kali_tools.sh).
+
+### 🕵️ Offensive Security Tools
+| Category | Tools |
+|-----------|--------|
+| Reconnaissance | `nmap`, `masscan`, `gobuster`, `whois` |
+| Web Exploitation | `sqlmap`, `nikto`, `wpscan` |
+| Frameworks | `metasploit-framework`, `burpsuite` |
+| Password Attacks | `hydra`, `john`, `hashcat` |
+
+### 🛡️ Defensive / Analysis Tools
+| Category | Tools |
+|-----------|--------|
+| Network Monitoring | `wireshark`, `tshark`, `tcpdump` |
+| Intrusion Detection | `zeek`, `suricata` |
+| Threat Analysis | `yara`, `clamav`, `chkrootkit` |
+| Containers / Sandbox | `docker`, `docker-compose` |
+
+---
+
+## 🧪 How to Use
+
+### 🖥️ 1. Download Kali Linux
+Get the ISO from [Kali.org → Official Downloads](https://www.kali.org/get-kali/#kali-platforms).
+
+### ⚡ 2. Create a New VM
+1. Open **VMware Workstation** → *Create a New Virtual Machine*  
+2. Select the **Kali Linux 2025.3 ISO**  
+3. Configure hardware:  
+   - 4 GB RAM  
+   - 4 Processors  
+   - 30 GB Disk (NAT Networking)  
+4. Boot and complete installation.
+
+### 🔧 3. Install Tools
+Once the VM is running:
 ```bash
-# Update & upgrade
-sudo apt update && sudo apt -y full-upgrade
-
-# Run the installer script from this repo
-chmod +x scripts/install_kali_tools.sh
-sudo scripts/install_kali_tools.sh
-```
-
----
-
-## What the installer installs (offensive + defensive)
-**Offensive / Red-team tools** (examples)
-- nmap, gobuster, masscan, hydra, wafw00f
-- metasploit-framework (package)
-- sqlmap, nikto
-
-**Defensive / Blue-team tools**
-- wireshark, tshark, suricata, zeek (if available), elastic-agent (optional)
-- osquery (optional), syslog / rsyslog, logrotate
-
-**Common tooling & utilities**
-- git, curl, python3, pip, docker (optional), tcpdump, net-tools, seclists
-
-> The installer is idempotent and will skip already-installed packages. Heavy installs (full Metasploit, Elastic Stack) are optional/conditional to avoid long unattended installs.
-
----
-
-## Structure of this starter repo
-```
-cyber-lab-vm/
-├─ README.md
-├─ .gitignore
-├─ scripts/
-│  └─ install_kali_tools.sh
-└─ docs/
-   └─ vm-settings.png   <-- copy your VMware screenshot here (already included)
-```
-
-## Safety & ethics
-- **Only** run offensive tooling in isolated lab networks. Do not target external systems or networks you do not own/have permission to test.
-- Use sanitized PCAPs or synthetic data when sharing outputs.
-
-## How to share the actual VM (optional)
-If you want to share a VM image (OVA), host it outside of GitHub (S3, Google Drive) and link to it in this repo do **not** upload large VM images to GitHub directly.
-
----
-If you'd like, I can also create a GitHub Actions workflow that lints the repo and validates script syntax.  
+git clone https://github.com/gregepierre/cyber-lab-vm.git
+cd cyber-lab-vm/scripts
+chmod +x install_kali_tools.sh
+sudo ./install_kali_tools.sh
