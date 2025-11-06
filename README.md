@@ -60,7 +60,7 @@ cyber-lab-vm/
 - Use sanitized PCAPs or synthetic data when sharing outputs.
 
 ## How to share the actual VM (optional)
-If you want to share a VM image (OVA), host it outside of GitHub (S3, Google Drive) and link to it in this repo; do **not** upload large VM images to GitHub directly.
+If you want to share a VM image (OVA), host it outside of GitHub (S3, Google Drive) and link to it in this repo do **not** upload large VM images to GitHub directly.
 
 ---
 If you'd like, I can also create a GitHub Actions workflow that lints the repo and validates script syntax.  
