@@ -1,4 +1,4 @@
-# 🧠 Cybersecurity Lab VM
+# Cybersecurity Lab VM
 
 A virtual cybersecurity lab environment built on **Kali Linux 2025.3 (VMware Workstation)** — designed for hands-on exploration of **offensive, defensive, and analytical security tools**.
 
@@ -19,11 +19,11 @@ It provides an isolated environment to safely test exploits, analyze network tra
 
 ---
 
-## 🧰 Installed Tools
+## Installed Tools
 
 The lab includes a curated selection of tools installed via [`install_kali_tools.sh`](scripts/install_kali_tools.sh).
 
-### 🕵️ Offensive Security Tools
+### Offensive Security Tools
 | Category | Tools |
 |-----------|--------|
 | Reconnaissance | `nmap`, `masscan`, `gobuster`, `whois` |
@@ -31,7 +31,7 @@ The lab includes a curated selection of tools installed via [`install_kali_tools
 | Frameworks | `metasploit-framework`, `burpsuite` |
 | Password Attacks | `hydra`, `john`, `hashcat` |
 
-### 🛡️ Defensive / Analysis Tools
+### Defensive / Analysis Tools
 | Category | Tools |
 |-----------|--------|
 | Network Monitoring | `wireshark`, `tshark`, `tcpdump` |
@@ -41,12 +41,12 @@ The lab includes a curated selection of tools installed via [`install_kali_tools
 
 ---
 
-## 🧪 How to Use
+## How to Use
 
-### 🖥️ 1. Download Kali Linux
+### 1. Download Kali Linux
 Get the ISO from [Kali.org → Official Downloads](https://www.kali.org/get-kali/#kali-platforms).
 
-### ⚡ 2. Create a New VM
+### 2. Create a New VM
 1. Open **VMware Workstation** → *Create a New Virtual Machine*  
 2. Select the **Kali Linux 2025.3 ISO**  
 3. Configure hardware:  
@@ -55,7 +55,7 @@ Get the ISO from [Kali.org → Official Downloads](https://www.kali.org/get-kali
    - 30 GB Disk (NAT Networking)  
 4. Boot and complete installation.
 
-### 🔧 3. Install Tools
+### 3. Install Tools
 Once the VM is running:
 ```bash
 git clone https://github.com/gregepierre/cyber-lab-vm.git
