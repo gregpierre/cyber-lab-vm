@@ -6,7 +6,7 @@ A virtual cybersecurity lab environment built on **Kali Linux 2025.3 (VMware Wor
 
 ---
 
-## ⚙️ Overview
+## Overview
 
 This virtual machine serves as a controlled lab setup for cybersecurity learning and experimentation.  
 It provides an isolated environment to safely test exploits, analyze network traffic, and evaluate threat detection tools.
